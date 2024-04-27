@@ -1,12 +1,12 @@
 import requests
 
-# URL of the API endpoint
-url = "https://super-invention-px7jvqwgj6qcrgrp-8000.app.github.dev/device"
+# URL
+url = "https://65637844-7657-4005-895b-782e640e1224-00-2otbdi0gavunf.pike.repl.co/device"
 
-# Define the JSON data to send, only the field you want to update
+# data values
 data = {
     "motor":"on",
-    "object": "banana"
+    "object": "null"
 }
 
 # Send a PATCH request with the JSON data
