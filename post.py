@@ -1,20 +1,19 @@
 import requests
 
-# Define the URL of the API endpoint
-url = "https://fluffy-happiness-ggx49wr57xvfx74-8000.app.github.dev/device"
+# URL of the API endpoint
+url = "https://super-invention-px7jvqwgj6qcrgrp-8000.app.github.dev/device"
 
-# Define the JSON data to send
+# Define the JSON data to send, only the field you want to update
 data = {
-    "connection": False,
-    "motor": "off",
-    "speed": 0.0
+    "motor":"on",
+    "object": "banana"
 }
 
-# Send a POST request with the JSON data
-response = requests.post(url, json=data)
+# Send a PATCH request with the JSON data
+response = requests.patch(url, json=data)
 
 # Check the response status code
 if response.status_code == 200:
-    print("Data successfully written to the API.")
+    print("Data successfully updated in the API.")
 else:
-    print(f"Failed to write data to the API. Status code: {response.status_code}")
+    print(f"Failed to update data in the API. Status code: {response.status_code}, Response: {response.text}")
